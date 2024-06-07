@@ -3,13 +3,16 @@ package br.dev.ibere.automation.backend.rest.client.product;
 import br.dev.ibere.automation.backend.model.Product;
 import br.dev.ibere.automation.backend.model.Products;
 import br.dev.ibere.automation.backend.rest.client.base.WebClientRestClient;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
 
-
+@Component
+@ConditionalOnProperty(prefix = "rest", name = "client", havingValue = "webclient")
 public class WebClientProductRest extends WebClientRestClient implements ProductRest {
 
     @Override

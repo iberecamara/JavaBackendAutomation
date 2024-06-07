@@ -1,14 +1,17 @@
 package br.dev.ibere.automation.backend.rest.client.product.category;
 
 import br.dev.ibere.automation.backend.model.ProductCategory;
-import br.dev.ibere.automation.backend.model.Products;
 import br.dev.ibere.automation.backend.rest.client.base.RestAssuredRestClient;
 import io.restassured.http.ContentType;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
+@Component
+@ConditionalOnProperty(prefix = "rest", name = "client", havingValue = "restassured")
 public class RestAssuredProductCategoryRest extends RestAssuredRestClient implements ProductCategoryRest {
 
     @Override
