@@ -6,7 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(features = {"src/main/resources/features",},
         glue = {"br.dev.ibere.automation.backend.steps",
                 "br.dev.ibere.automation.backend.runner"},
-        plugin = {"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",}
+        plugin = {"pretty",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",}
 )
 public class CucumberTestRunner extends AbstractTestNGCucumberTests {
 }
