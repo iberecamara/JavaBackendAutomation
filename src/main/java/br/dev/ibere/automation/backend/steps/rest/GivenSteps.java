@@ -1,8 +1,7 @@
-package br.dev.ibere.automation.backend.steps;
+package br.dev.ibere.automation.backend.steps.rest;
 
 import br.dev.ibere.automation.backend.exception.AutomationException;
 import br.dev.ibere.automation.backend.model.Product;
-import br.dev.ibere.automation.backend.steps.basic.RestSteps;
 import io.cucumber.java.en.Given;
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,7 +26,7 @@ public class GivenSteps extends RestSteps {
             case "updated":
                 log.info("Creating a new Product with id...");
                 putInContext("updatableProduct", Product.builder()
-                        .id(1)
+                        .id(1L)
                         .title("Updated product title")
                         .category("Updated category")
                         .price(new BigDecimal("99.99"))

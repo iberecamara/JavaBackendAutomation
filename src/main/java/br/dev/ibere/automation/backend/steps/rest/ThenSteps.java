@@ -1,4 +1,4 @@
-package br.dev.ibere.automation.backend.steps;
+package br.dev.ibere.automation.backend.steps.rest;
 
 import br.dev.ibere.automation.backend.exception.AutomationException;
 import br.dev.ibere.automation.backend.model.Product;
@@ -58,8 +58,8 @@ public class ThenSteps extends BaseSteps {
     @Then("I receive the {string} product in the response body")
     public void validateProduct(String type) {
         log.info("Validating that a product was {}...", type);
-        Product generatedProduct = new Product();
-        Product retrievedProduct = new Product();
+        Product generatedProduct;
+        Product retrievedProduct;
         switch (type) {
             case "deleted":
                 retrievedProduct = getFromContext("deletedProduct");

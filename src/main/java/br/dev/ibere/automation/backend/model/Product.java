@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.util.List;
 
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -16,7 +17,7 @@ import java.util.List;
 public class Product {
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private Integer id;
+    private Long id;
     @JsonProperty
     private String title;
     @JsonProperty

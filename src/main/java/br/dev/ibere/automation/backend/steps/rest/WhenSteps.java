@@ -1,7 +1,6 @@
-package br.dev.ibere.automation.backend.steps;
+package br.dev.ibere.automation.backend.steps.rest;
 
 import br.dev.ibere.automation.backend.exception.AutomationException;
-import br.dev.ibere.automation.backend.steps.basic.RestSteps;
 import io.cucumber.java.en.When;
 import lombok.extern.slf4j.Slf4j;
 

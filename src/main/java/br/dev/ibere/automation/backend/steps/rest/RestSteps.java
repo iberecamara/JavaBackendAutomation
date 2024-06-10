@@ -1,6 +1,7 @@
-package br.dev.ibere.automation.backend.steps.basic;
+package br.dev.ibere.automation.backend.steps.rest;
 
 import br.dev.ibere.automation.backend.rest.service.RestService;
+import br.dev.ibere.automation.backend.steps.basic.BaseSteps;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
