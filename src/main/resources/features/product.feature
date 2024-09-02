@@ -6,13 +6,13 @@ Feature: Verify Dummy JSON Products API
 
 
   Scenario: Save new product
-    Given I create a "new" product
+    Given I create a new product
     When I send a request to "save" a product
     Then I receive the "saved" product in the response body
 
 
   Scenario: Update a product
-    Given I create a "updated" product
+    Given I update a product
     When I send a request to "update" a product
     Then I receive the "updated" product in the response body
 
